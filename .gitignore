@@ -29,3 +29,4 @@ desktop.ini         # Windows
 
 # 결과 압축파일 무시
 *.zip
+/release/
