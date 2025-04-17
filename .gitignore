@@ -1,0 +1,37 @@
+# 🐍 Python 관련
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+
+# 📦 pip 관련
+*.egg-info/
+.eggs/
+.env/
+.venv/
+env/
+venv/
+pip-log.txt
+
+# 🧪 PyInstaller 빌드 결과물
+build/
+dist/
+*.spec
+
+# 📄 requirements 자동 생성 파일 (원하면 포함해도 됨)
+# requirements.txt
+
+# 🧪 테스트 결과물
+*.test.*
+*.coverage
+.cache/
+
+# 💻 운영체제별 무시
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 🧪 텍스트 출력 결과
+commits.txt

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Git 커밋 요약기</title>
+</head>
+
+<body>
+  <h1>📋 Git 커밋 요약기</h1>
+  <form method="post">
+    <label>📁 Git 프로젝트 경로:</label><br />
+    <input type="text" name="repo_path" required /><br /><br />
+
+    <label>👤 작성자 이름 (필수):</label><br />
+    <input type="text" name="author" required /><br /><br />
+
+    <label>📅 시작일 (예: 2024-04-01):</label><br />
+    <input type="text" name="since" /><br /><br />
+
+    <label>📅 종료일 (예: 2024-04-15):</label><br />
+    <input type="text" name="until" /><br /><br />
+
+    <button type="submit">요약하기</button>
+  </form>
+
+  {% if summary %}
+  <h2>✅ 커밋 목록</h2>
+  <ul>
+    {% for commit in summary.commits %}
+    <li>{{ commit }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="/download" download>
+    <button>📥 TXT 파일로 저장하기</button>
+  </a>
+
+  <h2>🔍 키워드 요약</h2>
+  <ul>
+    {% for word, count in summary.keywords %}
+    <li>{{ word }}: {{ count }}회</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</body>
+
+</html>
